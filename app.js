@@ -25,7 +25,9 @@ async function getWeatherResponse(location) {
 
 async function getFetchData(location) {
     try {
+        setLoadingState(true);
         const fetchData = await getWeather(location);
+        setLoadingState(false);
         renderWeatherInfo(data)
     }
 }
@@ -41,4 +43,16 @@ function renderWeatherInfo(data) {
     extra.querySelector(".condition").textContent = data.current.condition.text;
     extra.querySelector(".windspeed").textContent = data.current.wind_kph;
     extra.querySelector(".humidity").textContent = `${data.current.humidity}% humidity`;
+}
+
+
+// spinner
+function setLoadingState(value) {
+    const spinner = document.querySelector(".spinner");
+    if (value) {
+        spinner.classList.add("loading");
+    }
+    else {
+        spinner.classList.remove("loading");
+    }
 }
