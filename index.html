@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet", href="./style.css"/>
+    <script src="./app.js" defer></script>
     <title>Weather App</title>
 </head>
 <body>
@@ -13,13 +14,13 @@
 
             <div class="search-container">
                 <h2>Daily Weather Report</h2>
-                <input type="search" placeholder="Calabar"/>
+                <input type="search" placeholder="Calabar" required/>
                 <button class="search-button">Search</button>
             </div>
 
             <div class="weather-container">
                 <div class="weather-card">
-                    <div class="spinner loading"></div>
+                    <div class="spinner"></div>
                     <div class="location"></div>
                     <div class="temperature"></div>
                     <div class="extra">
@@ -27,7 +28,6 @@
                         <span class="windspeed"></span>
                         <span class="humidity"></span>
                     </div>
-                    <div></div>
                 </div>
             </div>
 

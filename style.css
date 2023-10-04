@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-    color: #fff;
 }
 
 html, body {
@@ -54,6 +53,10 @@ main > .container {
     position: relative;
 }
 
+h2 {
+    color: #fff;
+}
+
 input {
     font-size: 1rem;
     color: #000;
@@ -83,11 +86,11 @@ button {
     background-color: white;
     height: 310px;
     border-radius: 25px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    position: relative
+    justify-content: space-between;
+    position: relative;
 }
 
 .spinner {
@@ -104,6 +107,34 @@ button {
     margin: auto;
     opacity: 0;
     z-index: -1;
+}
+
+.location:before {
+    content: "";
+    background: url("./location.svg");
+    height: 20px;
+    width: 20px;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.extra  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .loading {
