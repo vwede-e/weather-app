@@ -51,7 +51,7 @@ function renderWeatherInfo(data) {
     location.textContent = data.location.name;
     temperature.innerHTML = `${data.current.temp_c}&deg;C`;
     extra.querySelector(".condition").textContent = data.current.condition.text;
-    extra.querySelector(".windspeed").textContent = `${data.current.wind_kph}kph`;
+    extra.querySelector(".windspeed").textContent = `${data.current.wind_kph}kmh`;
     extra.querySelector(".humidity").textContent = `${data.current.humidity}% humidity`;
 }
 
