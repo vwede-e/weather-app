@@ -17,8 +17,12 @@ async function getWeatherResponse(location) {
         else if (error instanceof SyntaxError) {
             console.log("Error Parsing File to Json");
         }
+        else if (error.message.includes("Enter Valid City")) {
+            throw error;
+        }
         else {
-            console.log("WHo cares really")
+            console.log("WHo cares really");
+
         }
     }
 }
@@ -86,4 +90,9 @@ function handleSearch() {
 
 }
 
-getFetchData("Calabar");
+if (navigator.onLine) {
+    getFetchData("Calabar");
+}
+else {
+    alert("No Internet Connection");
+}
